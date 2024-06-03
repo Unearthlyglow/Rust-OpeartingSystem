@@ -2,6 +2,7 @@
 #![no_main] // disable all Rust-level entry points
 
 use core::panic::PanicInfo;
+mod vga_buffer;
 
 static HELLO: &[u8] = b"Hello World!";
 
@@ -23,3 +24,5 @@ pub extern "C" fn _start() -> ! {
 fn panic(_info: &PanicInfo) -> ! {
     loop {}
 }
+
+/// Welcome back
